@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    background: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.container .wrapper {
+    background: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 32px;
+}
+
+.container .wrapper .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .wrapper .imgBox {
+    position: relative;
+}
+
+.container .wrapper .imgBox::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: hsla(277, 64%, 61%, 0.2);
+}
+
+.container .wrapper .text {
+    padding: 13%;
+}
+
+.container .wrapper .text .title {
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.container .wrapper .text .title span {
+    color: #AA5CDB;
+    font-weight: 700;
+}
+
+.container .wrapper .text .subtitle {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+}
+
+.container .wrapper .text .box {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+
+.container .wrapper .text .box .num {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.container .wrapper .text .box p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        text-align: center;
+    }
+
+    .container .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .container .wrapper .imgBox {
+        order: -1;
+    }
+
+    .container .wrapper .text .box {
+        flex-direction: column;
+    }
+
+    .container .wrapper .text .box div {
+        margin-top: 20px;
+    }
+
+    .container .wrapper .text .title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container .wrapper {
+        grid-template-columns: 1fr;
+    }
+}

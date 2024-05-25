@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: hsl(204, 43%, 93%);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container .wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "a a" "b c";
+    border-radius: 10px;
+    background: #FFF;
+    margin: 40px 20px;
+
+}
+
+.container .wrapper .box {
+    padding: 40px;
+}
+
+.container .wrapper .join {
+    grid-area: a;
+}
+
+.container .wrapper .sub {
+    grid-area: b;
+    background-color: #2AB2AF;
+}
+
+.container .wrapper .why {
+    grid-area: c;
+    background-color: #30CFCC;
+}
+
+.container .wrapper .join h1 {
+    color: hsl(179, 62%, 43%);
+    font-size: 26px;
+    padding-bottom: 20px;
+}
+
+.container .wrapper .join h3 {
+    color: hsl(71, 73%, 54%);
+    padding-bottom: 12px;
+}
+
+.container .wrapper .join p {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.4;
+}
+
+.container .wrapper .box h2 {
+    color: #FFF;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.container .wrapper .box h5 {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.container .wrapper .box h5 span.price {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.container .wrapper .box h5 span {
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+}
+
+.container .wrapper .sub p {
+    color: #fff;
+}
+
+.container .wrapper .sub a {
+    display: block;
+    text-align: center;
+    background-color: hsl(71, 73%, 54%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 12px 0;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.container .wrapper .why ul li {
+    color: #fff;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+/* responsive */
+@media only screen and (max-width: 425px) {
+    .container .wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: "a" "b" "c";
+    }
+
+    .container .wrapper .box {
+        padding: 30px;
+    }
+}
